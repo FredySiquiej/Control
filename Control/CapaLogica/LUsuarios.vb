@@ -53,5 +53,17 @@ Public Class LUsuarios
     End Function
 
 
+    Public Function validarUsuario(id As Integer, nom As String, us As String, con As Integer)
+
+        Dim dc As New DUsuarios(0, nom, us, con)
+
+        If dc.validacionUsuario(dc) = True Then
+            Return True
+        Else
+            Return False
+
+        End If
+    End Function
+
 
 End Class

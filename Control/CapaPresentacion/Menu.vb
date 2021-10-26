@@ -43,4 +43,20 @@
         Me.Hide()
 
     End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub btnPeticiones_Click(sender As Object, e As EventArgs) Handles btnPeticiones.Click
+        frmPeticiones.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+        frmValidacionIngreso.Show()
+        Me.Hide()
+
+    End Sub
 End Class

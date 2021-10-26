@@ -6,7 +6,7 @@ Public Class DUsuarios
     Private idUsuario As Integer
     Private nombres As String
     Private usuario As String
-    Private contrasena As String
+    Private contrasena As Integer
 
     Private cmd As MySqlCommand
 
@@ -230,7 +230,93 @@ End Function
 
 
 
+    Public Function ListarUsuario() As DataSet
+        Dim adaptador As MySqlDataAdapter
+        Dim datos As DataSet
 
+        Try
+            conectar()
+
+            Dim sql As String = "SELECT * FROM USUARIOS "
+
+
+
+            adaptador = New MySqlDataAdapter(sql, con)
+            datos = New DataSet
+            datos.Tables.Add("USUARIOS")
+            adaptador.Fill(datos.Tables("USUARIOS"))
+            Return datos
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
+
+
+    Public Function validacionUsuario(dc As DUsuarios) As Boolean
+
+        Try
+            conectar()
+
+            Dim sql As String = "SELECT  * FROM USUARIOS WHERE NOMBRES='" & dc.nombreUsuario & "' AND CONTRASENA='" & dc.contrasenaUsuario & "'  "
+
+            Dim r As MySqlDataReader
+
+
+
+            cmd = New MySqlCommand(sql, con)
+            cmd.CommandText = sql
+
+            r = cmd.ExecuteReader
+
+
+
+
+
+
+            If r.HasRows <> False Then
+                If dc.usuario = "operador" Then
+                    r.Read()
+                    MsgBox("Bienvenido " + dc.nombreUsuario)
+                    frmMenu.Show()
+
+                Else
+                    MsgBox("Bienvenido " + dc.nombreUsuario)
+                    frmMenu.Show()
+                End If
+
+            Else
+
+                MsgBox("La contraseña o el usuario no son validos, intente de nuevo")
+
+            End If
+
+
+
+
+            Return True
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
 
 
 
