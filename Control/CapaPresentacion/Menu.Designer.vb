@@ -30,6 +30,8 @@ Partial Class frmMenu
         Me.btnSolicitar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnPeticiones = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtUsuarios
@@ -98,11 +100,21 @@ Partial Class frmMenu
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GroupBox1.Controls.Add(Me.btnPeticiones)
         Me.GroupBox1.Location = New System.Drawing.Point(4, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(917, 598)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
+        '
+        'btnPeticiones
+        '
+        Me.btnPeticiones.Location = New System.Drawing.Point(664, 231)
+        Me.btnPeticiones.Name = "btnPeticiones"
+        Me.btnPeticiones.Size = New System.Drawing.Size(163, 101)
+        Me.btnPeticiones.TabIndex = 8
+        Me.btnPeticiones.Text = "Peticiones a Administrador"
+        Me.btnPeticiones.UseVisualStyleBackColor = True
         '
         'frmMenu
         '
@@ -120,6 +132,7 @@ Partial Class frmMenu
         Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Name = "frmMenu"
         Me.Text = "Menu"
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -132,4 +145,5 @@ Partial Class frmMenu
     Friend WithEvents btnSolicitar As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents btnPeticiones As Button
 End Class
