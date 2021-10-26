@@ -36,6 +36,7 @@ Partial Class frmInsertarUsuario
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnMenu = New System.Windows.Forms.Button()
+        Me.cmbUsuario = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -161,11 +162,20 @@ Partial Class frmInsertarUsuario
         Me.btnMenu.Text = "Regresar Menu"
         Me.btnMenu.UseVisualStyleBackColor = True
         '
+        'cmbUsuario
+        '
+        Me.cmbUsuario.FormattingEnabled = True
+        Me.cmbUsuario.Location = New System.Drawing.Point(310, 241)
+        Me.cmbUsuario.Name = "cmbUsuario"
+        Me.cmbUsuario.Size = New System.Drawing.Size(121, 24)
+        Me.cmbUsuario.TabIndex = 14
+        '
         'frmInsertarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1110, 529)
+        Me.Controls.Add(Me.cmbUsuario)
         Me.Controls.Add(Me.btnMenu)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.Label5)
@@ -202,4 +212,5 @@ Partial Class frmInsertarUsuario
     Friend WithEvents txtId As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents btnMenu As Button
+    Friend WithEvents cmbUsuario As ComboBox
 End Class

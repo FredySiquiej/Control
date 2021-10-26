@@ -1,12 +1,18 @@
 ﻿Public Class frmMenu
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles txtUsuarios.Click
+
+    Dim datos As New DataSet
+    Dim cmbUs As Integer
+    Dim hoy As DateTime = DateTime.Now
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnGestionUsuarios.Click
         frmInsertarUsuario.Show()
         Me.Hide()
 
 
     End Sub
 
-    Private Sub txtInventario_Click(sender As Object, e As EventArgs) Handles txtInventario.Click
+    Private Sub txtInventario_Click(sender As Object, e As EventArgs) Handles btnGestionarProductos.Click
         frmGestionarProductos.Show()
         Me.Hide()
 
@@ -20,7 +26,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnPedidos.Click
         frmPedidos.Show()
         Me.Hide()
 
@@ -38,7 +44,7 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnDevoluciones.Click
         frmDevoluciones.Show()
         Me.Hide()
 
@@ -57,6 +63,50 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs)
         frmValidacionIngreso.Show()
         Me.Hide()
+
+    End Sub
+
+    Sub listarUsuario()
+        Try
+            Dim func As New DUsuarios
+            datos = func.ListarUsuario
+
+
+            cmbUsuarios.DataSource = datos.Tables("USUARIOS")
+            cmbUsuarios.DisplayMember = "NOMBRES"
+            cmbUs = CStr(cmbUsuarios.SelectedValue)
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+    End Sub
+
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) 
+
+        Try
+
+            Dim lc As New LUsuarios()
+            lc.validarUsuario(0, cmbUsuarios.Text, "a", txtContrasena.Text)
+
+
+
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub cmbUsuarios_SelectedValueChanged(sender As Object, e As EventArgs) 
+        cmbUsuarios.ValueMember = "idUsuario"
+        cmbUs = CStr(cmbUsuarios.SelectedValue)
+    End Sub
+
+    Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        listarUsuario()
+
 
     End Sub
 End Class
