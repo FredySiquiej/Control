@@ -139,6 +139,12 @@
     <Compile Include="CapaPresentacion\Menu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CapaPresentacion\menuAdministrador.Designer.vb">
+      <DependentUpon>menuAdministrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\menuAdministrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CapaPresentacion\Pedidos.Designer.vb">
       <DependentUpon>Pedidos.vb</DependentUpon>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\menuAdministrador.resx">
+      <DependentUpon>menuAdministrador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Pedidos.resx">
       <DependentUpon>Pedidos.vb</DependentUpon>

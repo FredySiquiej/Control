@@ -1,11 +1,18 @@
 ﻿Public Class frmInsertarUsuario
     Dim dt As New DataTable
     Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btnCrear.Click
-
+        Dim aux As Integer
         Try
 
+            If cmbUsuario.Text = "Administrador" Then
+                aux = 1
+            Else
+                aux = 2
+
+            End If
+
             Dim lc As New LUsuarios()
-            lc.insertarUsuario(0, txtNombre.Text, txtUsuario.Text, txtContrasena.Text)
+            lc.insertarUsuario(0, txtNombre.Text, aux, txtContrasena.Text)
             Mostrar()
         Catch ex As Exception
 
@@ -30,6 +37,8 @@
 
     Private Sub frmInsertarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Mostrar()
+        cmbUsuario.Items.Add("Operador")
+        cmbUsuario.Items.Add("Administrador")
 
     End Sub
 

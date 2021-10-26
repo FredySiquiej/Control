@@ -14,7 +14,9 @@
         Try
 
             Dim lc As New LUsuarios()
-            lc.validarUsuario(0, cmbUsuarios.Text, "a", txtContrasena.Text)
+            lc.validarUsuario(0, cmbUsuarios.Text, cmbUs, txtContrasena.Text)
+
+            Me.Hide()
 
 
         Catch ex As Exception
@@ -31,6 +33,7 @@
 
             cmbUsuarios.DataSource = datos.Tables("USUARIOS")
             cmbUsuarios.DisplayMember = "NOMBRES"
+
             cmbUs = CStr(cmbUsuarios.SelectedValue)
 
 
@@ -41,8 +44,10 @@
     End Sub
 
     Private Sub cmbUsuarios_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbUsuarios.SelectedValueChanged
-        cmbUsuarios.ValueMember = "idUsuario"
+        cmbUsuarios.ValueMember = "usuario"
+
         cmbUs = CStr(cmbUsuarios.SelectedValue)
+
 
     End Sub
 End Class

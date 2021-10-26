@@ -2,7 +2,7 @@
 
 Public Class DUsuarios
     Inherits Conexion
-
+    Public mn As String
     Private idUsuario As Integer
     Private nombres As String
     Private usuario As String
@@ -273,6 +273,11 @@ End Function
 
 
 
+
+
+
+
+
             cmd = New MySqlCommand(sql, con)
             cmd.CommandText = sql
 
@@ -284,14 +289,31 @@ End Function
 
 
             If r.HasRows <> False Then
-                If dc.usuario = "operador" Then
+                If dc.usuarioAsignado = 2 Then
                     r.Read()
                     MsgBox("Bienvenido " + dc.nombreUsuario)
                     frmMenu.Show()
+                    frmMenu.btnGestionarProductos.Visible = False
+                    frmMenu.btnConsultas.Visible = False
+                    frmMenu.btnDepartamentos.Visible = False
+                    frmMenu.btnGestionUsuarios.Visible = False
+
+
+                    mn = 2
+
+
 
                 Else
                     MsgBox("Bienvenido " + dc.nombreUsuario)
                     frmMenu.Show()
+                    frmMenu.btnDevoluciones.Visible = False
+                    frmMenu.btnIngresar.Visible = False
+                    frmMenu.btnPedidos.Visible = False
+                    frmMenu.btnPeticiones.Visible = False
+                    frmMenu.btnSolicitar.Visible = False
+
+                    mn = 1
+
                 End If
 
             Else
