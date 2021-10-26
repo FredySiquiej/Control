@@ -30,6 +30,13 @@ Partial Class frmInsertarUsuario
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.txtContrasena = New System.Windows.Forms.TextBox()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnMenu = New System.Windows.Forms.Button()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,7 +51,7 @@ Partial Class frmInsertarUsuario
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(147, 91)
+        Me.Label2.Location = New System.Drawing.Point(147, 134)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 17)
         Me.Label2.TabIndex = 1
@@ -53,7 +60,7 @@ Partial Class frmInsertarUsuario
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(150, 159)
+        Me.Label3.Location = New System.Drawing.Point(150, 202)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(119, 17)
         Me.Label3.TabIndex = 2
@@ -62,7 +69,7 @@ Partial Class frmInsertarUsuario
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(150, 241)
+        Me.Label4.Location = New System.Drawing.Point(150, 284)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(81, 17)
         Me.Label4.TabIndex = 3
@@ -79,30 +86,92 @@ Partial Class frmInsertarUsuario
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(310, 85)
+        Me.txtNombre.Location = New System.Drawing.Point(310, 128)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 22)
         Me.txtNombre.TabIndex = 5
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(310, 159)
+        Me.txtUsuario.Location = New System.Drawing.Point(310, 202)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(100, 22)
         Me.txtUsuario.TabIndex = 6
         '
         'txtContrasena
         '
-        Me.txtContrasena.Location = New System.Drawing.Point(310, 235)
+        Me.txtContrasena.Location = New System.Drawing.Point(310, 278)
         Me.txtContrasena.Name = "txtContrasena"
         Me.txtContrasena.Size = New System.Drawing.Size(100, 22)
         Me.txtContrasena.TabIndex = 7
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(574, 359)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(163, 61)
+        Me.btnEliminar.TabIndex = 8
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(531, 63)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(527, 263)
+        Me.DataGridView1.TabIndex = 9
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Location = New System.Drawing.Point(814, 369)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(143, 61)
+        Me.btnModificar.TabIndex = 10
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'txtId
+        '
+        Me.txtId.Location = New System.Drawing.Point(313, 71)
+        Me.txtId.Name = "txtId"
+        Me.txtId.ReadOnly = True
+        Me.txtId.Size = New System.Drawing.Size(100, 22)
+        Me.txtId.TabIndex = 12
+        Me.txtId.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(150, 77)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(19, 17)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "id"
+        Me.Label5.Visible = False
+        '
+        'btnMenu
+        '
+        Me.btnMenu.Location = New System.Drawing.Point(55, 458)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(92, 59)
+        Me.btnMenu.TabIndex = 13
+        Me.btnMenu.Text = "Regresar Menu"
+        Me.btnMenu.UseVisualStyleBackColor = True
         '
         'frmInsertarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1110, 529)
+        Me.Controls.Add(Me.btnMenu)
+        Me.Controls.Add(Me.txtId)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.txtContrasena)
         Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.txtNombre)
@@ -113,6 +182,7 @@ Partial Class frmInsertarUsuario
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmInsertarUsuario"
         Me.Text = "frmInsertarUsuario"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -126,4 +196,10 @@ Partial Class frmInsertarUsuario
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtUsuario As TextBox
     Friend WithEvents txtContrasena As TextBox
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents btnMenu As Button
 End Class

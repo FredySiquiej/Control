@@ -86,12 +86,66 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapaDatos\Conexion.vb" />
+    <Compile Include="CapaDatos\DDepartamento.vb" />
+    <Compile Include="CapaDatos\DDevoluciones.vb" />
+    <Compile Include="CapaDatos\DPedidos.vb" />
+    <Compile Include="CapaDatos\DProductos.vb" />
     <Compile Include="CapaDatos\DUsuarios.vb" />
+    <Compile Include="CapaDatos\DIngresar.vb" />
+    <Compile Include="CapaDatos\DSolicitarStock.vb" />
+    <Compile Include="CapaLogica\LDepartamento.vb" />
+    <Compile Include="CapaLogica\LDevoluciones.vb" />
+    <Compile Include="CapaLogica\LIngresar.vb" />
+    <Compile Include="CapaLogica\LPedidos.vb" />
+    <Compile Include="CapaLogica\LProducto.vb" />
+    <Compile Include="CapaLogica\LSolicitudStock.vb" />
     <Compile Include="CapaLogica\LUsuarios.vb" />
+    <Compile Include="CapaPresentacion\Departamento.Designer.vb">
+      <DependentUpon>Departamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Departamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\DevolucionDefectuoso.Designer.vb">
+      <DependentUpon>DevolucionDefectuoso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\DevolucionDefectuoso.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CapaPresentacion\frmInsertarUsuario.Designer.vb">
       <DependentUpon>frmInsertarUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\frmInsertarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\GestionarProductos.Designer.vb">
+      <DependentUpon>GestionarProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\GestionarProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Ingreso.Designer.vb">
+      <DependentUpon>Ingreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Ingreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Pedidos.Designer.vb">
+      <DependentUpon>Pedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Pedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Solicitar Stock.Designer.vb">
+      <DependentUpon>Solicitar Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Solicitar Stock.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -112,8 +166,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CapaPresentacion\Departamento.resx">
+      <DependentUpon>Departamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\DevolucionDefectuoso.resx">
+      <DependentUpon>DevolucionDefectuoso.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\frmInsertarUsuario.resx">
       <DependentUpon>frmInsertarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\GestionarProductos.resx">
+      <DependentUpon>GestionarProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Ingreso.resx">
+      <DependentUpon>Ingreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Pedidos.resx">
+      <DependentUpon>Pedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Solicitar Stock.resx">
+      <DependentUpon>Solicitar Stock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -134,6 +209,8 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\flecha.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
