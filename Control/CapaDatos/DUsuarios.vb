@@ -11,7 +11,8 @@ Public Class DUsuarios
     Private cmd As MySqlCommand
 
 
-    Public Sub New(nom As String, us As String, con As Integer)
+    Public Sub New(id As Integer, nom As String, us As String, con As Integer)
+        idUsuario = id
         nombres = nom
         usuario = us
         contrasena = con
@@ -23,6 +24,17 @@ Public Class DUsuarios
     Public Sub New()
 
     End Sub
+
+
+    Public Property idUs As String
+
+        Get
+            Return idUsuario
+        End Get
+        Set(value As String)
+            idUsuario = value
+        End Set
+    End Property
 
 
     Public Property nombreUsuario As String
@@ -66,7 +78,7 @@ Public Class DUsuarios
         Try
             conectar()
 
-            Dim sql As String = "INSERT INTO USUARIOS(NOMBRES,USUARIO,CONTRASENA) VALUES('" & dc.nombreUsuario & "','" & dc.usuarioAsignado & "','" & dc.contrasenaUsuario & "')"
+            Dim sql As String = "INSERT INTO USUARIOS(NOMBRES,USUARIO,CONTRASENA) VALUES('" & dc.nombreUsuario & "','" & dc.usuarioAsignado & "','" & dc.contrasena & "')"
 
 
             cmd = New MySqlCommand(sql, con)
@@ -93,6 +105,129 @@ Public Class DUsuarios
         End Try
 
     End Function
+
+
+
+
+
+
+
+
+
+
+    Public Function EliminarUsuario(dc As DUsuarios) As Boolean
+
+    Try
+        conectar()
+
+            Dim sql As String = "delete from USUARIOS where USUARIOS.idUsuario = '" & dc.idUsuario & "' "
+
+
+
+            cmd = New MySqlCommand(sql, con)
+
+        If cmd.ExecuteNonQuery() Then
+
+                MsgBox("El usuario se ha Eliminado Exitosamente !")
+                Return True
+
+        Else
+            Return False
+
+        End If
+
+
+
+    Catch ex As Exception
+        MsgBox(ex.Message)
+        Return False
+
+    Finally
+        desconectar()
+
+    End Try
+
+End Function
+
+
+
+
+
+    Public Function ConsultaUsuario() As DataTable
+
+        Try
+            conectar()
+
+            Dim sql As String = "SELECT * FROM USUARIOS "
+
+
+
+            cmd = New MySqlCommand(sql, con)
+
+            If cmd.ExecuteNonQuery() Then
+                Dim dt As New DataTable
+                Dim da As New MySqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+
+
+            Else
+                Return Nothing
+
+            End If
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
+
+
+    Public Function modificarUsuario(dc As DUsuarios) As Boolean
+
+        Try
+            conectar()
+
+            Dim sql As String = "UPDATE USUARIOS SET NOMBRES='" & dc.nombreUsuario & "', USUARIO='" & dc.usuarioAsignado & "',CONTRASENA='" & dc.contrasenaUsuario & "' WHERE idUsuario = '" & dc.idUs & "' "
+
+
+
+            cmd = New MySqlCommand(sql, con)
+
+            If cmd.ExecuteNonQuery() Then
+
+                MsgBox("El usuario se ha MODIFICADO exitosamente !")
+                Return True
+
+            Else
+                Return False
+
+            End If
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
+
 
 
 
