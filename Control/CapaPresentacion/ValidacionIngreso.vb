@@ -1,12 +1,15 @@
 ﻿Public Class frmValidacionIngreso
     Dim datos As New DataSet
     Dim cmbUs As Integer
+    Public idValid As Integer
     Dim hoy As DateTime = DateTime.Now
 
 
 
     Private Sub frmValidacionIngreso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarUsuario()
+        cmbUsuarios.SelectedIndex = -1
+
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
@@ -14,9 +17,9 @@
         Try
 
             Dim lc As New LUsuarios()
-            lc.validarUsuario(0, cmbUsuarios.Text, cmbUs, txtContrasena.Text)
+            lc.validarUsuario(idValid, cmbUsuarios.Text, cmbUs, txtContrasena.Text)
 
-            Me.Hide()
+
 
 
         Catch ex As Exception
@@ -47,6 +50,8 @@
         cmbUsuarios.ValueMember = "usuario"
 
         cmbUs = CStr(cmbUsuarios.SelectedValue)
+
+
 
 
     End Sub

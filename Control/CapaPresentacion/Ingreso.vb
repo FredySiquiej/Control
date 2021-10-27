@@ -68,6 +68,8 @@
         Mostrar()
         txtFechaIngreso.Text = hoy
         cmbProducto.SelectedIndex = -1
+        Dim auxx As DUsuarios = New DUsuarios
+        txtUsuario.Text = Val(auxx.idValid)
 
     End Sub
 

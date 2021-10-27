@@ -179,7 +179,7 @@ Public Class DPedidos
         Try
             conectar()
 
-            Dim sql As String = "SELECT * FROM PEDIDOS "
+            Dim sql As String = "SELECT PEDIDOS.idPedidos, PRODUCTOS.descripcion, PEDIDOS.cantidad, PEDIDOS.fecha_pedido, PEDIDOS.idUsuario, USUARIOS.nombres, DEPARTAMENTO.descripcion FROM PEDIDOS INNER JOIN PRODUCTOS ON PRODUCTOS.idProducto = PEDIDOS.idProducto INNER JOIN USUARIOS on USUARIOS.idUsuario = PEDIDOS.idUsuario INNER JOIN DEPARTAMENTO ON DEPARTAMENTO.idDepartamento = PEDIDOS.idDepto "
 
 
 
