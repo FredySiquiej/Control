@@ -175,6 +175,7 @@ Partial Class frmInsertarUsuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1110, 529)
+        Me.ControlBox = False
         Me.Controls.Add(Me.cmbUsuario)
         Me.Controls.Add(Me.btnMenu)
         Me.Controls.Add(Me.txtId)

@@ -42,6 +42,7 @@ Partial Class frmValidacionIngreso
         '
         Me.txtContrasena.Location = New System.Drawing.Point(397, 252)
         Me.txtContrasena.Name = "txtContrasena"
+        Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContrasena.Size = New System.Drawing.Size(217, 22)
         Me.txtContrasena.TabIndex = 2
         '
@@ -76,6 +77,7 @@ Partial Class frmValidacionIngreso
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(961, 565)
+        Me.ControlBox = False
         Me.Controls.Add(Me.cmbUsuarios)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
