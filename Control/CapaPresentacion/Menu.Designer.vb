@@ -30,9 +30,9 @@ Partial Class frmMenu
         Me.btnSolicitar = New System.Windows.Forms.Button()
         Me.btnDevoluciones = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnConsultas = New System.Windows.Forms.Button()
         Me.btnPeticiones = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -118,6 +118,15 @@ Partial Class frmMenu
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         '
+        'btnCerrar
+        '
+        Me.btnCerrar.Location = New System.Drawing.Point(18, 363)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(163, 101)
+        Me.btnCerrar.TabIndex = 10
+        Me.btnCerrar.Text = "&Cerrar Sesion"
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
         'btnConsultas
         '
         Me.btnConsultas.Location = New System.Drawing.Point(1052, 253)
@@ -136,20 +145,12 @@ Partial Class frmMenu
         Me.btnPeticiones.Text = "Peticiones a Administrador"
         Me.btnPeticiones.UseVisualStyleBackColor = True
         '
-        'btnCerrar
-        '
-        Me.btnCerrar.Location = New System.Drawing.Point(18, 363)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(163, 101)
-        Me.btnCerrar.TabIndex = 10
-        Me.btnCerrar.Text = "&Cerrar Sesion"
-        Me.btnCerrar.UseVisualStyleBackColor = True
-        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1259, 600)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox1)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Name = "frmMenu"

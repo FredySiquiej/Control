@@ -103,6 +103,36 @@
     <Compile Include="CapaLogica\LProducto.vb" />
     <Compile Include="CapaLogica\LSolicitudStock.vb" />
     <Compile Include="CapaLogica\LUsuarios.vb" />
+    <Compile Include="CapaPresentacion\CONSULTA-C-E-S.Designer.vb">
+      <DependentUpon>CONSULTA-C-E-S.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTA-C-E-S.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTA-P-E-E-P.Designer.vb">
+      <DependentUpon>CONSULTA-P-E-E-P.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTA-P-E-E-P.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTA-P-P-D.Designer.vb">
+      <DependentUpon>CONSULTA-P-P-D.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTA-P-P-D.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTAS-I-P-P-U.Designer.vb">
+      <DependentUpon>CONSULTAS-I-P-P-U.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTAS-I-P-P-U.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Consultas.Designer.vb">
+      <DependentUpon>Consultas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Consultas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CapaPresentacion\Departamento.Designer.vb">
       <DependentUpon>Departamento.vb</DependentUpon>
     </Compile>
@@ -187,6 +217,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CapaPresentacion\CONSULTA-C-E-S.resx">
+      <DependentUpon>CONSULTA-C-E-S.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\CONSULTA-P-E-E-P.resx">
+      <DependentUpon>CONSULTA-P-E-E-P.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\CONSULTA-P-P-D.resx">
+      <DependentUpon>CONSULTA-P-P-D.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\CONSULTAS-I-P-P-U.resx">
+      <DependentUpon>CONSULTAS-I-P-P-U.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Consultas.resx">
+      <DependentUpon>Consultas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Departamento.resx">
       <DependentUpon>Departamento.vb</DependentUpon>
     </EmbeddedResource>

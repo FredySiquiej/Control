@@ -185,6 +185,7 @@ Partial Class Ingreso
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1243, 625)
+        Me.ControlBox = False
         Me.Controls.Add(Me.lblprod)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.Label5)

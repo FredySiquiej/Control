@@ -69,6 +69,7 @@ Partial Class frmMenuAdministrador
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnConsultas)
         Me.Controls.Add(Me.btnGestionarProductos)
         Me.Controls.Add(Me.txtUsuarios)

@@ -155,6 +155,7 @@ Partial Class frmDepartamento
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1165, 392)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnRegresar)

@@ -225,6 +225,7 @@ Partial Class frmPedidos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1154, 475)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnSolicitar)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.btnEliminar)
