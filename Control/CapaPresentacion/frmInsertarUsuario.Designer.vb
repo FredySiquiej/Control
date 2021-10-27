@@ -28,7 +28,6 @@ Partial Class frmInsertarUsuario
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnCrear = New System.Windows.Forms.Button()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.txtContrasena = New System.Windows.Forms.TextBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -37,6 +36,7 @@ Partial Class frmInsertarUsuario
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.cmbUsuario = New System.Windows.Forms.ComboBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -91,13 +91,6 @@ Partial Class frmInsertarUsuario
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 22)
         Me.txtNombre.TabIndex = 5
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.Location = New System.Drawing.Point(310, 202)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(100, 22)
-        Me.txtUsuario.TabIndex = 6
         '
         'txtContrasena
         '
@@ -165,10 +158,17 @@ Partial Class frmInsertarUsuario
         'cmbUsuario
         '
         Me.cmbUsuario.FormattingEnabled = True
-        Me.cmbUsuario.Location = New System.Drawing.Point(310, 241)
+        Me.cmbUsuario.Location = New System.Drawing.Point(310, 202)
         Me.cmbUsuario.Name = "cmbUsuario"
         Me.cmbUsuario.Size = New System.Drawing.Size(121, 24)
         Me.cmbUsuario.TabIndex = 14
+        '
+        'txtUsuario
+        '
+        Me.txtUsuario.Location = New System.Drawing.Point(310, 202)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(100, 22)
+        Me.txtUsuario.TabIndex = 6
         '
         'frmInsertarUsuario
         '
@@ -204,7 +204,6 @@ Partial Class frmInsertarUsuario
     Friend WithEvents Label4 As Label
     Friend WithEvents btnCrear As Button
     Friend WithEvents txtNombre As TextBox
-    Friend WithEvents txtUsuario As TextBox
     Friend WithEvents txtContrasena As TextBox
     Friend WithEvents btnEliminar As Button
     Friend WithEvents DataGridView1 As DataGridView
@@ -213,4 +212,5 @@ Partial Class frmInsertarUsuario
     Friend WithEvents Label5 As Label
     Friend WithEvents btnMenu As Button
     Friend WithEvents cmbUsuario As ComboBox
+    Friend WithEvents txtUsuario As TextBox
 End Class

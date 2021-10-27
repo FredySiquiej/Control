@@ -50,9 +50,7 @@
 
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
-    End Sub
 
     Private Sub btnPeticiones_Click(sender As Object, e As EventArgs) Handles btnPeticiones.Click
         frmPeticiones.Show()
@@ -66,46 +64,15 @@
 
     End Sub
 
-    Sub listarUsuario()
-        Try
-            Dim func As New DUsuarios
-            datos = func.ListarUsuario
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+
+        frmValidacionIngreso.Show()
+        frmValidacionIngreso.cmbUsuarios.SelectedIndex = -1
+        frmValidacionIngreso.txtContrasena.Text = ""
+
+        Me.Hide()
 
 
-            cmbUsuarios.DataSource = datos.Tables("USUARIOS")
-            cmbUsuarios.DisplayMember = "NOMBRES"
-            cmbUs = CStr(cmbUsuarios.SelectedValue)
-
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) 
-
-        Try
-
-            Dim lc As New LUsuarios()
-            lc.validarUsuario(0, cmbUsuarios.Text, "a", txtContrasena.Text)
-
-
-
-
-        Catch ex As Exception
-
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub cmbUsuarios_SelectedValueChanged(sender As Object, e As EventArgs) 
-        cmbUsuarios.ValueMember = "idUsuario"
-        cmbUs = CStr(cmbUsuarios.SelectedValue)
-    End Sub
-
-    Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        listarUsuario()
 
 
     End Sub

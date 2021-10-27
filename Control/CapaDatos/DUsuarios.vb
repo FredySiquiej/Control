@@ -3,6 +3,7 @@
 Public Class DUsuarios
     Inherits Conexion
     Public mn As String
+    Public idValid As Integer
     Private idUsuario As Integer
     Private nombres As String
     Private usuario As String
@@ -297,20 +298,43 @@ End Function
                     frmMenu.btnConsultas.Visible = False
                     frmMenu.btnDepartamentos.Visible = False
                     frmMenu.btnGestionUsuarios.Visible = False
+                    idValid = r.GetValue(0)
 
+
+                    frmMenu.btnDevoluciones.Visible = True
+                    frmMenu.btnPedidos.Visible = True
+                    frmMenu.btnPeticiones.Visible = True
+                    frmMenu.btnSolicitar.Visible = True
+                    frmMenu.btnIngreso.Visible = True
+                    idValid = r.GetValue(0)
+                    frmValidacionIngreso.Visible = False
 
                     mn = 2
 
 
 
                 Else
+                    r.Read()
                     MsgBox("Bienvenido " + dc.nombreUsuario)
                     frmMenu.Show()
                     frmMenu.btnDevoluciones.Visible = False
-                    frmMenu.btnIngresar.Visible = False
                     frmMenu.btnPedidos.Visible = False
                     frmMenu.btnPeticiones.Visible = False
                     frmMenu.btnSolicitar.Visible = False
+                    frmMenu.btnIngreso.Visible = False
+                    idValid = r.GetValue(0)
+
+                    frmMenu.btnGestionarProductos.Visible = True
+                    frmMenu.btnConsultas.Visible = True
+                    frmMenu.btnDepartamentos.Visible = True
+                    frmMenu.btnGestionUsuarios.Visible = True
+
+
+
+                    frmValidacionIngreso.Visible = False
+
+
+
 
                     mn = 1
 
@@ -318,7 +342,7 @@ End Function
 
             Else
 
-                MsgBox("La contraseña o el usuario no son validos, intente de nuevo")
+                MsgBox("La contraseña o el usuario son Incorrectos")
 
             End If
 

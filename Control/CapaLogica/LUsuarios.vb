@@ -31,12 +31,7 @@ Public Class LUsuarios
     End Function
 
 
-    Public Function ConsultaUsuario()
 
-        Dim dc As New DUsuarios()
-
-
-    End Function
 
 
 

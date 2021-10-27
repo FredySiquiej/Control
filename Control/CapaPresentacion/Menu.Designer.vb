@@ -32,6 +32,7 @@ Partial Class frmMenu
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnConsultas = New System.Windows.Forms.Button()
         Me.btnPeticiones = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -64,11 +65,11 @@ Partial Class frmMenu
         '
         'btnPedidos
         '
-        Me.btnPedidos.Location = New System.Drawing.Point(639, 100)
+        Me.btnPedidos.Location = New System.Drawing.Point(588, 103)
         Me.btnPedidos.Name = "btnPedidos"
         Me.btnPedidos.Size = New System.Drawing.Size(163, 101)
         Me.btnPedidos.TabIndex = 3
-        Me.btnPedidos.Text = "Hacer Pedidos"
+        Me.btnPedidos.Text = "Pedidos"
         Me.btnPedidos.UseVisualStyleBackColor = True
         '
         'btnDepartamentos
@@ -91,7 +92,7 @@ Partial Class frmMenu
         '
         'btnDevoluciones
         '
-        Me.btnDevoluciones.Location = New System.Drawing.Point(639, 253)
+        Me.btnDevoluciones.Location = New System.Drawing.Point(588, 253)
         Me.btnDevoluciones.Name = "btnDevoluciones"
         Me.btnDevoluciones.Size = New System.Drawing.Size(163, 101)
         Me.btnDevoluciones.TabIndex = 6
@@ -101,6 +102,7 @@ Partial Class frmMenu
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GroupBox1.Controls.Add(Me.btnCerrar)
         Me.GroupBox1.Controls.Add(Me.btnConsultas)
         Me.GroupBox1.Controls.Add(Me.btnGestionarProductos)
         Me.GroupBox1.Controls.Add(Me.btnDevoluciones)
@@ -127,12 +129,21 @@ Partial Class frmMenu
         '
         'btnPeticiones
         '
-        Me.btnPeticiones.Location = New System.Drawing.Point(100, 203)
+        Me.btnPeticiones.Location = New System.Drawing.Point(148, 166)
         Me.btnPeticiones.Name = "btnPeticiones"
         Me.btnPeticiones.Size = New System.Drawing.Size(163, 101)
         Me.btnPeticiones.TabIndex = 8
         Me.btnPeticiones.Text = "Peticiones a Administrador"
         Me.btnPeticiones.UseVisualStyleBackColor = True
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Location = New System.Drawing.Point(18, 363)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(163, 101)
+        Me.btnCerrar.TabIndex = 10
+        Me.btnCerrar.Text = "&Cerrar Sesion"
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'frmMenu
         '
@@ -158,4 +169,5 @@ Partial Class frmMenu
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnPeticiones As Button
     Friend WithEvents btnConsultas As Button
+    Friend WithEvents btnCerrar As Button
 End Class

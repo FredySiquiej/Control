@@ -106,7 +106,7 @@
         txtCantidad.Text = DataGridView1.Item(2, i).Value()
         txtFecha.Text = DataGridView1.Item(3, i).Value()
         txtIdUsuario.Text = DataGridView1.Item(4, i).Value()
-        cmbDepartamento.Text = DataGridView1.Item(5, i).Value()
+        cmbDepartamento.Text = DataGridView1.Item(6, i).Value()
     End Sub
 
     Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btnCrear.Click

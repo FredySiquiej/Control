@@ -148,7 +148,7 @@ Public Class DIngresar
         Try
             conectar()
 
-            Dim sql As String = "SELECT * FROM INGRESOS "
+            Dim sql As String = "SELECT INGRESOS.idIngresos, PRODUCTOS.descripcion, INGRESOS.cantidad, INGRESOS.fecha_Ingreso, INGRESOS.idUsuario, USUARIOS.nombres FROM INGRESOS  INNER JOIN PRODUCTOS   on PRODUCTOS.idProducto = INGRESOS.idProducto INNER JOIN USUARIOS on  USUARIOS.idUsuario = INGRESOS.idUsuario"
 
 
 
