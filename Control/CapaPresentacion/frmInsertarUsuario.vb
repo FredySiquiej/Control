@@ -62,11 +62,20 @@
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        Dim aux As Integer
+
 
         Try
+            If cmbUsuario.Text = "Administrador" Then
+                aux = 1
+            Else
+                aux = 2
+
+            End If
+
 
             Dim lc As New LUsuarios()
-            lc.modificarUsuario(txtId.Text, txtNombre.Text, txtUsuario.Text, txtContrasena.Text)
+            lc.modificarUsuario(txtId.Text, txtNombre.Text, aux, txtContrasena.Text)
             Mostrar()
         Catch ex As Exception
 
@@ -91,13 +100,16 @@
 
         txtId.Text = DataGridView1.Item(0, i).Value()
         txtNombre.Text = DataGridView1.Item(1, i).Value()
-        txtUsuario.Text = DataGridView1.Item(2, i).Value()
-        txtContrasena.Text = DataGridView1.Item(3, i).Value()
+        cmbUsuario.Text = DataGridView1.Item(3, i).Value()
+        txtContrasena.Text = DataGridView1.Item(4, i).Value()
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
         frmMenu.Show()
-        Me.Hide()
+
+
+        frmValidacionIngreso.listarUsuario()
+        Me.Close()
 
     End Sub
 End Class

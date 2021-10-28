@@ -27,6 +27,7 @@ Partial Class frmConsultas
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnRegresar = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnProducto
@@ -58,7 +59,7 @@ Partial Class frmConsultas
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(464, 220)
+        Me.Button3.Location = New System.Drawing.Point(203, 351)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(167, 87)
         Me.Button3.TabIndex = 3
@@ -74,12 +75,22 @@ Partial Class frmConsultas
         Me.btnRegresar.Text = "&Regresar"
         Me.btnRegresar.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(464, 220)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(167, 87)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "&Pedidos Por USUARIO"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'frmConsultas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -96,4 +107,5 @@ Partial Class frmConsultas
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents btnRegresar As Button
+    Friend WithEvents Button4 As Button
 End Class

@@ -45,6 +45,8 @@ Public Class LProducto
     End Function
 
 
+
+
 End Class
 
 

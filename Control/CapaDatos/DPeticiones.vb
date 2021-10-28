@@ -227,5 +227,42 @@ Public Class DPeticiones
 
 
 
+    Public Function ConsultaEstadosPendietes(aux As String) As DataTable
+
+        Try
+            conectar()
+
+            Dim sql As String = "SELECT PETICIONES.idPeticiones, PETICIONES.Descripcion, PETICIONES.fechaPeticion, PETICIONES.estado, USUARIOS.idUsuario, USUARIOS.nombres FROM PETICIONES INNER JOIN USUARIOS on PETICIONES.idUsuario=USUARIOS.idUsuario where PETICIONES.estado = '" & aux & "' "
+
+
+
+            cmd = New MySqlCommand(sql, con)
+
+            If cmd.ExecuteNonQuery() Then
+                Dim dt As New DataTable
+                Dim da As New MySqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+
+
+            Else
+                Return Nothing
+
+            End If
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
 
 End Class

@@ -159,7 +159,7 @@ End Function
         Try
             conectar()
 
-            Dim sql As String = "SELECT * FROM USUARIOS "
+            Dim sql As String = "SELECT USUARIOS.idUsuario, USUARIOS.nombres,USUARIOS.usuario, tipoUsuario.tipoUsuario, USUARIOS.contrasena FROM USUARIOS INNER JOIN tipoUsuario on tipoUsuario.IDTIPOUSUARIO=USUARIOS.usuario  "
 
 
 
@@ -308,6 +308,7 @@ End Function
                     frmMenu.btnIngreso.Visible = True
                     idValid = r.GetValue(0)
                     frmValidacionIngreso.Visible = False
+
 
                     mn = 2
 

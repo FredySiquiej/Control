@@ -23,8 +23,8 @@ Partial Class frmCONSULTA_C_E_S
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmbProducto = New System.Windows.Forms.ComboBox()
+        Me.btnConsultar = New System.Windows.Forms.Button()
         Me.btnImprimir = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,22 +40,22 @@ Partial Class frmCONSULTA_C_E_S
         Me.DataGridView1.Size = New System.Drawing.Size(966, 293)
         Me.DataGridView1.TabIndex = 0
         '
-        'ComboBox1
+        'cmbProducto
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(169, 77)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(306, 24)
-        Me.ComboBox1.TabIndex = 1
+        Me.cmbProducto.FormattingEnabled = True
+        Me.cmbProducto.Location = New System.Drawing.Point(169, 77)
+        Me.cmbProducto.Name = "cmbProducto"
+        Me.cmbProducto.Size = New System.Drawing.Size(306, 24)
+        Me.cmbProducto.TabIndex = 1
         '
-        'Button1
+        'btnConsultar
         '
-        Me.Button1.Location = New System.Drawing.Point(505, 77)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 32)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "&Consultar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnConsultar.Location = New System.Drawing.Point(505, 77)
+        Me.btnConsultar.Name = "btnConsultar"
+        Me.btnConsultar.Size = New System.Drawing.Size(94, 32)
+        Me.btnConsultar.TabIndex = 2
+        Me.btnConsultar.Text = "&Consultar"
+        Me.btnConsultar.UseVisualStyleBackColor = True
         '
         'btnImprimir
         '
@@ -83,8 +83,8 @@ Partial Class frmCONSULTA_C_E_S
         Me.ControlBox = False
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnImprimir)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnConsultar)
+        Me.Controls.Add(Me.cmbProducto)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmCONSULTA_C_E_S"
         Me.Text = "CONSULTA_C_E_S"
@@ -94,8 +94,8 @@ Partial Class frmCONSULTA_C_E_S
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents cmbProducto As ComboBox
+    Friend WithEvents btnConsultar As Button
     Friend WithEvents btnImprimir As Button
     Friend WithEvents Button2 As Button
 End Class

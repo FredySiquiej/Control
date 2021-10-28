@@ -127,6 +127,12 @@
     <Compile Include="CapaPresentacion\CONSULTAS-I-P-P-U.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CapaPresentacion\CONSULTAS-P-P-U.Designer.vb">
+      <DependentUpon>CONSULTAS-P-P-U.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTAS-P-P-U.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CapaPresentacion\Consultas.Designer.vb">
       <DependentUpon>Consultas.vb</DependentUpon>
     </Compile>
@@ -187,6 +193,12 @@
     <Compile Include="CapaPresentacion\PeticionesdeUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CapaPresentacion\ResolverEstadoPendiente.Designer.vb">
+      <DependentUpon>ResolverEstadoPendiente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ResolverEstadoPendiente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CapaPresentacion\Solicitar Stock.Designer.vb">
       <DependentUpon>Solicitar Stock.vb</DependentUpon>
     </Compile>
@@ -229,6 +241,9 @@
     <EmbeddedResource Include="CapaPresentacion\CONSULTAS-I-P-P-U.resx">
       <DependentUpon>CONSULTAS-I-P-P-U.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\CONSULTAS-P-P-U.resx">
+      <DependentUpon>CONSULTAS-P-P-U.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Consultas.resx">
       <DependentUpon>Consultas.vb</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\PeticionesdeUsuario.resx">
       <DependentUpon>PeticionesdeUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\ResolverEstadoPendiente.resx">
+      <DependentUpon>ResolverEstadoPendiente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Solicitar Stock.resx">
       <DependentUpon>Solicitar Stock.vb</DependentUpon>

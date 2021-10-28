@@ -1,20 +1,12 @@
-﻿Public Class frmCONSULTAS_I_P_P_U
+﻿Public Class frmCONSULTAS_P_P_U
 
     Dim dt As New DataTable
     Dim datos As New DataSet
     Public cmbUs As Integer
     Dim hoy As DateTime = DateTime.Now
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-        frmConsultas.Show()
-        Me.Close()
-
-
-    End Sub
-
     Sub Mostrar()
         Try
-            Dim func As New DIngresar
+            Dim func As New DPedidos
             dt = func.ConsulaporUsuario(cmbUs)
 
 
@@ -31,11 +23,9 @@
         End Try
     End Sub
 
-
-
     Sub listarUsuario()
         Try
-            Dim func As New DPedidos
+            Dim func As New DIngresar
             datos = func.ListarUsuario
 
 
@@ -51,20 +41,9 @@
         End Try
     End Sub
 
+    Private Sub CONSULTAS_P_P_U_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-
-
-
-
-
-
-
-
-
-    Private Sub frmCONSULTAS_I_P_P_U_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarUsuario()
-        cmbUsuario.SelectedIndex = -1
 
     End Sub
 
@@ -75,5 +54,13 @@
 
     Private Sub btnConsultar_Click(sender As Object, e As EventArgs) Handles btnConsultar.Click
         Mostrar()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        frmConsultas.Show()
+        Me.Close()
+
+
     End Sub
 End Class

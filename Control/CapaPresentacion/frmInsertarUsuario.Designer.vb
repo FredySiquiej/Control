@@ -158,7 +158,7 @@ Partial Class frmInsertarUsuario
         'cmbUsuario
         '
         Me.cmbUsuario.FormattingEnabled = True
-        Me.cmbUsuario.Location = New System.Drawing.Point(310, 202)
+        Me.cmbUsuario.Location = New System.Drawing.Point(310, 199)
         Me.cmbUsuario.Name = "cmbUsuario"
         Me.cmbUsuario.Size = New System.Drawing.Size(121, 24)
         Me.cmbUsuario.TabIndex = 14
