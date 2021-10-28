@@ -313,7 +313,111 @@ Public Class DPedidos
     End Function
 
 
+    Public Function ListarUsuario() As DataSet
+        Dim adaptador As MySqlDataAdapter
+        Dim datos As DataSet
 
+        Try
+            conectar()
+
+            Dim sql As String = "SELECT * FROM USUARIOS "
+
+
+
+            adaptador = New MySqlDataAdapter(sql, con)
+            datos = New DataSet
+            datos.Tables.Add("USUARIOS")
+            adaptador.Fill(datos.Tables("USUARIOS"))
+            Return datos
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
+    Public Function ConsulaporDepto(id As Integer) As DataTable
+
+        Try
+            conectar()
+            Dim dc As DPedidos = New DPedidos
+            dc.idDepartamento = frmCONSULTA_P_P_D.cmbDepto
+            Dim sql As String = "SELECT PEDIDOS.idPedidos, PRODUCTOS.DESCRIPCION, PRODUCTOS.marca ,PRODUCTOS.lote,PEDIDOS.cantidad, PEDIDOS.fecha_pedido,USUARIOS.nombres, DEPARTAMENTO.DESCRIPCION  FROM PEDIDOS INNER JOIN PRODUCTOS ON PRODUCTOS.idProducto= PEDIDOS.idProducto INNER JOIN USUARIOS on USUARIOS.idUsuario=PEDIDOS.idUsuario INNER JOIN DEPARTAMENTO ON DEPARTAMENTO.idDepartamento=PEDIDOS.idDepto where idDepto= '" & dc.idDeptoPedido & "'"
+
+
+
+            cmd = New MySqlCommand(sql, con)
+
+            If cmd.ExecuteNonQuery() Then
+                Dim dt As New DataTable
+                Dim da As New MySqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+
+
+            Else
+                Return Nothing
+
+            End If
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
+
+    Public Function ConsulaporUsuario(idu As Integer) As DataTable
+
+        Try
+            conectar()
+            Dim dc As DPedidos = New DPedidos
+            dc.idUsuarioPedido = idu
+            Dim sql As String = "SELECT PEDIDOS.idPedidos, PRODUCTOS.DESCRIPCION, PRODUCTOS.marca ,PRODUCTOS.lote,PEDIDOS.cantidad, PEDIDOS.fecha_pedido,USUARIOS.nombres, DEPARTAMENTO.DESCRIPCION  FROM PEDIDOS INNER JOIN PRODUCTOS ON PRODUCTOS.idProducto= PEDIDOS.idProducto INNER JOIN USUARIOS on USUARIOS.idUsuario=PEDIDOS.idUsuario INNER JOIN DEPARTAMENTO ON DEPARTAMENTO.idDepartamento=PEDIDOS.idDepto where PEDIDOS.idUsuario= '" & dc.idUsuarioPedido & "'"
+
+
+
+            cmd = New MySqlCommand(sql, con)
+
+            If cmd.ExecuteNonQuery() Then
+                Dim dt As New DataTable
+                Dim da As New MySqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+
+
+            Else
+                Return Nothing
+
+            End If
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
 
 
 

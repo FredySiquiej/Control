@@ -24,9 +24,10 @@ Partial Class frmCONSULTA_P_E_E_P
     Private Sub InitializeComponent()
         Me.btnImprimir = New System.Windows.Forms.Button()
         Me.btnConsultar = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,13 +49,13 @@ Partial Class frmCONSULTA_P_E_E_P
         Me.btnConsultar.Text = "&Consultar"
         Me.btnConsultar.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'cmbEstado
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(213, 67)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(306, 24)
-        Me.ComboBox1.TabIndex = 5
+        Me.cmbEstado.FormattingEnabled = True
+        Me.cmbEstado.Location = New System.Drawing.Point(213, 67)
+        Me.cmbEstado.Name = "cmbEstado"
+        Me.cmbEstado.Size = New System.Drawing.Size(306, 24)
+        Me.cmbEstado.TabIndex = 5
         '
         'DataGridView1
         '
@@ -75,16 +76,26 @@ Partial Class frmCONSULTA_P_E_E_P
         Me.Button2.Text = "&Cerrar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1015, 107)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 32)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "&Resolver"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmCONSULTA_P_E_E_P
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1213, 479)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnConsultar)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmbEstado)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmCONSULTA_P_E_E_P"
         Me.Text = "CONSULTA_P_E_E_P"
@@ -95,7 +106,8 @@ Partial Class frmCONSULTA_P_E_E_P
 
     Friend WithEvents btnImprimir As Button
     Friend WithEvents btnConsultar As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbEstado As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

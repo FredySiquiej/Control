@@ -26,7 +26,7 @@ Partial Class frmCONSULTAS_I_P_P_U
         Me.btnConsultar = New System.Windows.Forms.Button()
         Me.cmbUsuario = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -66,14 +66,14 @@ Partial Class frmCONSULTAS_I_P_P_U
         Me.DataGridView1.Size = New System.Drawing.Size(966, 293)
         Me.DataGridView1.TabIndex = 4
         '
-        'Button2
+        'btnCerrar
         '
-        Me.Button2.Location = New System.Drawing.Point(1006, 79)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 32)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "&Cerrar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCerrar.Location = New System.Drawing.Point(1006, 79)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(94, 32)
+        Me.btnCerrar.TabIndex = 8
+        Me.btnCerrar.Text = "&Cerrar"
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'frmCONSULTAS_I_P_P_U
         '
@@ -81,7 +81,7 @@ Partial Class frmCONSULTAS_I_P_P_U
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1204, 493)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.cmbUsuario)
@@ -97,5 +97,5 @@ Partial Class frmCONSULTAS_I_P_P_U
     Friend WithEvents btnConsultar As Button
     Friend WithEvents cmbUsuario As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCerrar As Button
 End Class

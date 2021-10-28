@@ -10,7 +10,8 @@ Public Class frmDepartamento
 
     Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
         frmMenu.Show()
-        Me.Hide()
+        Me.Close()
+
 
 
     End Sub

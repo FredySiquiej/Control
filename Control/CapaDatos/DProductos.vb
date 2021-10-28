@@ -259,4 +259,46 @@ Public Class DProductos
     End Function
 
 
+    Public Function ConsulaStock(id As Integer) As DataTable
+
+        Try
+            conectar()
+            Dim dc As DProductos = New DProductos
+            dc.idProd = frmCONSULTA_C_E_S.cmbProd
+            Dim sql As String = "SELECT PRODUCTOS.descripcion,PRODUCTOS.marca, PRODUCTOS.STOCK FROM PRODUCTOS where idProducto= '" & dc.idProd & "'"
+
+
+
+            cmd = New MySqlCommand(sql, con)
+
+            If cmd.ExecuteNonQuery() Then
+                Dim dt As New DataTable
+                Dim da As New MySqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+
+
+            Else
+                Return Nothing
+
+            End If
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
+
+
 End Class
+
+
