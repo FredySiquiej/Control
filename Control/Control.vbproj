@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\Documents\UMG\Analisis de computadoras II\ProyectoInventario\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Documents\UMG\Analisis de computadoras II\.net y mysql\mysql-connector-net-8.0.25-noinstall\v4.5.2\MySql.Data.dll</HintPath>

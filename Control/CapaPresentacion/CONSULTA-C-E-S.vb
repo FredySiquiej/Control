@@ -1,8 +1,21 @@
-﻿Public Class frmCONSULTA_C_E_S
+﻿
+Imports iTextSharp
+Imports iTextSharp.text.pdf
+Imports iTextSharp.text
+Imports System.Data.Odbc
+Imports System.IO
+
+Public Class frmCONSULTA_C_E_S
+
+
+
+
     Dim dt As New DataTable
     Dim datos As New DataSet
     Public cmbProd As Integer
     Dim hoy As DateTime = DateTime.Now
+
+
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         frmConsultas.Show()
@@ -50,6 +63,7 @@
     Private Sub frmCONSULTA_C_E_S_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarProducto()
 
+
         cmbProducto.SelectedIndex = -1
     End Sub
 
@@ -62,4 +76,10 @@
         Mostrar()
 
     End Sub
+
+
+
+
+
+
 End Class
