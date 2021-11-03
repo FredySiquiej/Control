@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Ingreso
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Ingreso
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
@@ -122,7 +122,7 @@ Partial Class Ingreso
         '
         'btnIngresar
         '
-        Me.btnIngresar.Location = New System.Drawing.Point(420, 473)
+        Me.btnIngresar.Location = New System.Drawing.Point(589, 417)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(136, 76)
         Me.btnIngresar.TabIndex = 11
@@ -131,7 +131,7 @@ Partial Class Ingreso
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(612, 473)
+        Me.btnModificar.Location = New System.Drawing.Point(753, 417)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(136, 76)
         Me.btnModificar.TabIndex = 12
@@ -140,7 +140,7 @@ Partial Class Ingreso
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(799, 473)
+        Me.btnEliminar.Location = New System.Drawing.Point(922, 417)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(136, 76)
         Me.btnEliminar.TabIndex = 13

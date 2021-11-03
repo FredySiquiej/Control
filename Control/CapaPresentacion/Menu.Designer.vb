@@ -87,7 +87,7 @@ Partial Class frmMenu
         Me.btnSolicitar.Name = "btnSolicitar"
         Me.btnSolicitar.Size = New System.Drawing.Size(163, 101)
         Me.btnSolicitar.TabIndex = 5
-        Me.btnSolicitar.Text = "Solicitar Stock"
+        Me.btnSolicitar.Text = "Gestionar orden de compra"
         Me.btnSolicitar.UseVisualStyleBackColor = True
         '
         'btnDevoluciones

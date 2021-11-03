@@ -3,6 +3,10 @@
     Dim datos As New DataSet
     Dim cmbProd As Integer
     Dim hoy As DateTime = DateTime.Now
+    Dim tabla As New DataTable()
+
+
+
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Dim pregunta As String
         pregunta = MsgBox("Esta Seguro de continuar, no podra modificar la informacion", vbYesNo + vbQuestion, "EXCELeINFO")
@@ -71,6 +75,13 @@
         Dim auxx As DUsuarios = New DUsuarios
         txtUsuario.Text = Val(auxx.idValid)
 
+
+
+
+
+
+
+
     End Sub
 
     Private Sub cmbProducto_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbProducto.SelectedValueChanged
@@ -110,6 +121,8 @@
         txtCantidad.Text = DataGridView1.Item(2, i).Value()
         txtFechaIngreso.Text = DataGridView1.Item(3, i).Value()
         txtUsuario.Text = DataGridView1.Item(4, i).Value()
+
+        DataGridView1.DataSource = tabla
 
     End Sub
 
