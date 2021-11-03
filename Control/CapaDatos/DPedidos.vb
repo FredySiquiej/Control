@@ -6,6 +6,7 @@ Public Class DPedidos
     Inherits Conexion
 
     Private idPedido As Integer
+    Private idformulario As Integer
     Private idProducto As Integer
     Private cantidad As Integer
     Private fechaPedido As DateTime
@@ -16,8 +17,9 @@ Public Class DPedidos
     Private cmd As MySqlCommand
 
 
-    Public Sub New(id As Integer, idProd As Integer, cant As Integer, fecha As DateTime, idUs As Integer, idDepto As Integer)
+    Public Sub New(id As Integer, idFor As Integer, idProd As Integer, cant As Integer, fecha As Date, idUs As Integer, idDepto As Integer)
         idPedido = id
+        idformulario = idFor
         idProducto = idProd
         cantidad = cant
         fechaPedido = fecha
@@ -45,6 +47,16 @@ Public Class DPedidos
         End Set
     End Property
 
+    Public Property idFormul As Integer
+
+        Get
+            Return idformulario
+        End Get
+        Set(value As Integer)
+            idformulario = value
+        End Set
+    End Property
+
 
     Public Property idProductoPedido As Integer
 
@@ -68,12 +80,12 @@ Public Class DPedidos
     End Property
 
 
-    Public Property fecPedido As DateTime
+    Public Property fecPedido As Date
 
         Get
             Return fechaPedido
         End Get
-        Set(value As DateTime)
+        Set(value As Date)
             fechaPedido = value
         End Set
     End Property
@@ -106,14 +118,14 @@ Public Class DPedidos
         Try
             conectar()
 
-            Dim sql As String = "INSERT INTO PEDIDOS(IDPRODUCTO,CANTIDAD,FECHA_PEDIDO,IDUSUARIO,IDDEPTO) VALUES('" & dc.idProductoPedido & "','" & dc.cantidadPedido & "',NOW(),'" & dc.idUsuarioPedido & "','" & dc.idDeptoPedido & "')"
+            Dim sql As String = "INSERT INTO PEDIDOS(IDFORMULARIO,IDPRODUCTO,CANTIDAD,FECHA_PEDIDO,IDUSUARIO,IDDEPTO) VALUES('" & dc.idFormul & "','" & dc.idProductoPedido & "','" & dc.cantidadPedido & "', now() ,'" & dc.idUsuarioPedido & "','" & dc.idDeptoPedido & "')"
 
 
             cmd = New MySqlCommand(sql, con)
 
             If cmd.ExecuteNonQuery() Then
 
-                MsgBox("el PEDIDO se ha ingresado exitosamente")
+                '  MsgBox("el PEDIDO se ha ingresado exitosamente")
                 Return True
 
             Else
@@ -266,6 +278,37 @@ Public Class DPedidos
             datos = New DataSet
             datos.Tables.Add("PRODUCTOS")
             adaptador.Fill(datos.Tables("PRODUCTOS"))
+            Return datos
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
+    Public Function ultimoId() As DataTable
+        Dim adaptador As MySqlDataAdapter
+        Dim datos As DataTable
+
+        Try
+            conectar()
+
+            Dim sql As String = "SELECT PEDIDOS.idFormulario FROM PEDIDOS ORDER BY idPedidos DESC LIMIT 1;"
+
+
+
+
+            adaptador = New MySqlDataAdapter(sql, con)
+            datos = New DataTable
+
+            adaptador.Fill(datos)
             Return datos
 
 

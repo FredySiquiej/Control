@@ -2,9 +2,9 @@
 
 Public Class LPedidos
 
-    Public Function insertarPedido(id As Integer, idProd As Integer, cant As Integer, fecha As DateTime, idUs As Integer, idDep As Integer)
+    Public Function insertarPedido(id As Integer, idform As Integer, idProd As Integer, cant As Integer, fecha As DateTime, idUs As Integer, idDep As Integer)
 
-        Dim dc As New DPedidos(0, idProd, cant, fecha, idUs, idDep)
+        Dim dc As New DPedidos(0, idform, idProd, cant, Now(), idUs, idDep)
 
         If dc.insertarPedido(dc) = True Then
             Return True
@@ -17,9 +17,9 @@ Public Class LPedidos
 
 
 
-    Public Function eliminarPedido(id As Integer, idProd As Integer, cant As Integer, fecha As DateTime, idUs As Integer, idDep As Integer)
+    Public Function eliminarPedido(id As Integer, idform As Integer, idProd As Integer, cant As Integer, fecha As DateTime, idUs As Integer, idDep As Integer)
 
-        Dim dc As New DPedidos(id, idProd, cant, fecha, idUs, idDep)
+        Dim dc As New DPedidos(id, idform, idProd, cant, fecha, idUs, idDep)
 
         If dc.EliminarPedido(dc) = True Then
             Return True
@@ -29,9 +29,9 @@ Public Class LPedidos
         End If
     End Function
 
-    Public Function modificarPedido(id As Integer, idProd As Integer, cant As Integer, fecha As DateTime, idUs As Integer, idDep As Integer)
+    Public Function modificarPedido(id As Integer, idform As Integer, idProd As Integer, cant As Integer, fecha As DateTime, idUs As Integer, idDep As Integer)
 
-        Dim dc As New DPedidos(id, idProd, cant, fecha, idUs, idDep)
+        Dim dc As New DPedidos(id, idform, idProd, cant, fecha, idUs, idDep)
 
         If dc.EliminarPedido(dc) = True Then
             Return True

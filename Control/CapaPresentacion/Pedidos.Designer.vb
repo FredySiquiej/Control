@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmPedidos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmPedidos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
@@ -42,7 +42,13 @@ Partial Class frmPedidos
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnRegresar = New System.Windows.Forms.Button()
         Me.btnSolicitar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.lblFormulario = New System.Windows.Forms.Label()
+        Me.btnCargar = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -168,16 +174,16 @@ Partial Class frmPedidos
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(541, 58)
+        Me.DataGridView1.Location = New System.Drawing.Point(528, 61)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(586, 191)
+        Me.DataGridView1.Size = New System.Drawing.Size(820, 298)
         Me.DataGridView1.TabIndex = 30
         '
         'btnCrear
         '
-        Me.btnCrear.Location = New System.Drawing.Point(602, 307)
+        Me.btnCrear.Location = New System.Drawing.Point(678, 610)
         Me.btnCrear.Name = "btnCrear"
         Me.btnCrear.Size = New System.Drawing.Size(140, 49)
         Me.btnCrear.TabIndex = 31
@@ -186,16 +192,16 @@ Partial Class frmPedidos
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(772, 310)
+        Me.btnModificar.Location = New System.Drawing.Point(947, 404)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(140, 49)
         Me.btnModificar.TabIndex = 32
-        Me.btnModificar.Text = "&Modificar"
+        Me.btnModificar.Text = "&Nuevo"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(952, 310)
+        Me.btnEliminar.Location = New System.Drawing.Point(1153, 459)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(140, 49)
         Me.btnEliminar.TabIndex = 33
@@ -204,7 +210,7 @@ Partial Class frmPedidos
         '
         'btnRegresar
         '
-        Me.btnRegresar.Location = New System.Drawing.Point(12, 414)
+        Me.btnRegresar.Location = New System.Drawing.Point(21, 482)
         Me.btnRegresar.Name = "btnRegresar"
         Me.btnRegresar.Size = New System.Drawing.Size(140, 49)
         Me.btnRegresar.TabIndex = 34
@@ -213,19 +219,71 @@ Partial Class frmPedidos
         '
         'btnSolicitar
         '
-        Me.btnSolicitar.Location = New System.Drawing.Point(178, 414)
+        Me.btnSolicitar.Location = New System.Drawing.Point(187, 482)
         Me.btnSolicitar.Name = "btnSolicitar"
         Me.btnSolicitar.Size = New System.Drawing.Size(140, 49)
         Me.btnSolicitar.TabIndex = 35
         Me.btnSolicitar.Text = "&Solicitar Stock"
         Me.btnSolicitar.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(339, 243)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(107, 60)
+        Me.Button1.TabIndex = 36
+        Me.Button1.Text = "Carrito"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(432, 610)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.RowTemplate.Height = 24
+        Me.DataGridView2.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView2.TabIndex = 37
+        Me.DataGridView2.Visible = False
+        '
+        'lblFormulario
+        '
+        Me.lblFormulario.AutoSize = True
+        Me.lblFormulario.Location = New System.Drawing.Point(538, 17)
+        Me.lblFormulario.Name = "lblFormulario"
+        Me.lblFormulario.Size = New System.Drawing.Size(51, 17)
+        Me.lblFormulario.TabIndex = 38
+        Me.lblFormulario.Text = "Label6"
+        '
+        'btnCargar
+        '
+        Me.btnCargar.Location = New System.Drawing.Point(784, 404)
+        Me.btnCargar.Name = "btnCargar"
+        Me.btnCargar.Size = New System.Drawing.Size(140, 49)
+        Me.btnCargar.TabIndex = 39
+        Me.btnCargar.Text = "&Cargar"
+        Me.btnCargar.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1153, 404)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(140, 49)
+        Me.Button2.TabIndex = 40
+        Me.Button2.Text = "&Consultar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1154, 475)
+        Me.ClientSize = New System.Drawing.Size(1360, 562)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnCargar)
+        Me.Controls.Add(Me.lblFormulario)
+        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnSolicitar)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.btnEliminar)
@@ -249,6 +307,7 @@ Partial Class frmPedidos
         Me.Name = "frmPedidos"
         Me.Text = "Pedidos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -274,4 +333,9 @@ Partial Class frmPedidos
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnRegresar As Button
     Friend WithEvents btnSolicitar As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents lblFormulario As Label
+    Friend WithEvents btnCargar As Button
+    Friend WithEvents Button2 As Button
 End Class
