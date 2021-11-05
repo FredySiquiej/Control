@@ -40,6 +40,4 @@ Public Class LPedidos
 
         End If
     End Function
-
-
 End Class

@@ -112,6 +112,12 @@
     <Compile Include="CapaPresentacion\CONSULTA-C-E-S.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CapaPresentacion\CONSULTA-F-P.Designer.vb">
+      <DependentUpon>CONSULTA-F-P.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\CONSULTA-F-P.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CapaPresentacion\CONSULTA-P-E-E-P.Designer.vb">
       <DependentUpon>CONSULTA-P-E-E-P.vb</DependentUpon>
     </Compile>
@@ -234,6 +240,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CapaPresentacion\CONSULTA-C-E-S.resx">
       <DependentUpon>CONSULTA-C-E-S.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\CONSULTA-F-P.resx">
+      <DependentUpon>CONSULTA-F-P.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\CONSULTA-P-E-E-P.resx">
       <DependentUpon>CONSULTA-P-E-E-P.vb</DependentUpon>
