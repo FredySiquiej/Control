@@ -28,6 +28,7 @@ Partial Class frmConsultas
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnRegresar = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnProducto
@@ -45,7 +46,7 @@ Partial Class frmConsultas
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(167, 87)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "&Pedidos Por Departamento"
+        Me.Button1.Text = "&Consulta Pedidos Por Departamento"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -54,7 +55,7 @@ Partial Class frmConsultas
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(167, 87)
         Me.Button2.TabIndex = 2
-        Me.Button2.Text = "&Ingresos Productos por Usuario"
+        Me.Button2.Text = "&Consulta Ingresos Productos por Usuario"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -81,8 +82,17 @@ Partial Class frmConsultas
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(167, 87)
         Me.Button4.TabIndex = 5
-        Me.Button4.Text = "&Pedidos Por USUARIO"
+        Me.Button4.Text = "&Consulta Pedidos Por USUARIO"
         Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(464, 351)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(167, 87)
+        Me.Button5.TabIndex = 6
+        Me.Button5.Text = "&Consulta Pedidos por FORMULARIOS"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'frmConsultas
         '
@@ -90,6 +100,7 @@ Partial Class frmConsultas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.Button3)
@@ -108,4 +119,5 @@ Partial Class frmConsultas
     Friend WithEvents Button3 As Button
     Friend WithEvents btnRegresar As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class

@@ -464,4 +464,44 @@ Public Class DPedidos
 
 
 
+
+    Public Function ConsulaFormulario(id As Integer) As DataTable
+
+        Try
+            conectar()
+
+            Dim sql As String = "SELECT PEDIDOS.idPedidos,PEDIDOS.idFormulario, PRODUCTOS.DESCRIPCION, PRODUCTOS.marca ,PRODUCTOS.lote,PEDIDOS.cantidad, PEDIDOS.fecha_pedido,USUARIOS.nombres, DEPARTAMENTO.DESCRIPCION  FROM PEDIDOS INNER JOIN PRODUCTOS ON PRODUCTOS.idProducto= PEDIDOS.idProducto INNER JOIN USUARIOS on USUARIOS.idUsuario=PEDIDOS.idUsuario INNER JOIN DEPARTAMENTO ON DEPARTAMENTO.idDepartamento=PEDIDOS.idDepto where idFormulario= '" & id & "'"
+
+
+
+            cmd = New MySqlCommand(sql, con)
+
+            If cmd.ExecuteNonQuery() Then
+                Dim dt As New DataTable
+                Dim da As New MySqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+
+
+            Else
+                Return Nothing
+
+            End If
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+            desconectar()
+
+        End Try
+
+    End Function
+
+
+
+
 End Class
